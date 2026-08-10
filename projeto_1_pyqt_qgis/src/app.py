@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog
 from PyQt5 import uic
 from pathlib import Path
-
+from qgis.gui import QgsFileWidget
 
 
 class MyDialog(QDialog):
