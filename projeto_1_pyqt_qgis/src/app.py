@@ -1,15 +1,19 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QDialog
-from PyQt6 import uic
+from PyQt5.QtWidgets import QApplication, QDialog
+from PyQt5 import uic
+from pathlib import Path
+
 
 
 class MyDialog(QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("dialog.ui", self)
+        script_dir = Path(__file__).parent.resolve()
+        uic.loadUi(script_dir / "dialog.ui", self)
+        self.pushButton.clicked.connect(self.baixar)
 
-        self.okButton.clicked.connect(self.accept)
-
+    def baixar(self):
+        self.accept()  # Close the dialog and return QDialog.Accepted
 
 def main():
     app = QApplication(sys.argv)
