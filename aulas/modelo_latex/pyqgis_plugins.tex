@@ -120,7 +120,21 @@ print(QgsApplication.qgisSettingsDirPath())
     \url{https://docs.qgis.org/3.34/en/docs/pyqgis_developer_cookbook/plugins/plugins.html}
 \end{frame}
 
+\begin{frame}{Criação de Plugin: GitHub}
+\textbf{Objetivo: Colocar a pasta .git e o código gerado pelo Plugin Builder na pasta do QGIS.}
 
+\begin{center}
+GitHub Desktop + QGIS + Plugin Builder
+\end{center}
+    \begin{itemize}
+\item Criar pasta do plugin no Plugin Builder
+\item Criar repositório GIT no GitHub
+\item Baixar (Clone) o repositório para a máquina local
+\item Copiar os arquivos de dentro da pasta do plugin para o repositório
+\item Mover pasta do repositório para a pasta de plugins do QGIS
+\item No GITHUB Desktop, adicionar repositório local e apontar para a pasta do plugin dentro da estrutura do QGIS
+    \end{itemize}
+\end{frame}
 
 \section{Depuração remota no QGIS}
 
